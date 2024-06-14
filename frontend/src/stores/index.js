@@ -1,4 +1,4 @@
-import {writeable, get, writable} from 'svelte/store'
+import {writable, get} from 'svelte/store'
 import { getApi, putApi, delApi, postApi } from "../service/api.js";
 import { router } from 'tinro'
 import {options} from "axios";
@@ -8,11 +8,12 @@ function setArticles() {}
 function setLoadingArticle() {}
 function setArticleContent() {}
 function setComments() {}
+
 function setAuth() {
     let initValues = {
         id: '',
         email: '',
-        Authorizatino: '',
+        Authorization: '',
     }
 
     const { subscribe, set, update } = writable({...initValues})
@@ -27,10 +28,12 @@ function setAuth() {
             isRefresh.set(false)
         }
     }
+
     const resetUserInfo = () => set({...initValues})
+
     const login = async (email, password) => {
         try {
-            const Options = {
+            const options = {
                 path: '/auth/login',
                 data: {
                     email: email,
@@ -88,6 +91,7 @@ function setAuth() {
         register,
     }
 }
+
 function setArticlesMode() {}
 function setIsLogin() {}
 
