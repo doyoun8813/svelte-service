@@ -1,7 +1,7 @@
 <script>
+    import Router from './router.svelte'
 </script>
 
-<main>
-
-</main>
-
+<div class="main-container">
+    <Router />
+</div>
