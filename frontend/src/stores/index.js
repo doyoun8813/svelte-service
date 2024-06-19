@@ -1,7 +1,6 @@
-import {writable, get} from 'svelte/store'
+import {writable, get, derived} from 'svelte/store'
 import { getApi, putApi, delApi, postApi } from "../service/api.js";
 import { router } from 'tinro'
-import {options} from "axios";
 
 function setCurrentArticlesPage() {}
 function setArticles() {}
@@ -93,7 +92,11 @@ function setAuth() {
 }
 
 function setArticlesMode() {}
-function setIsLogin() {}
+
+function setIsLogin() {
+    const checkLogin = derived(auth, $auth => !!$auth.Authorization)
+    return checkLogin
+}
 
 export const currentArticlesPage = setCurrentArticlesPage()
 export const articles = setArticles()

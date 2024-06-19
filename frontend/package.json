@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3015",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -15,16 +15,6 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "@smui/button": "^8.0.0-alpha.0",
-    "@smui/card": "^8.0.0-alpha.0",
-    "@smui/form-field": "^8.0.0-alpha.0",
-    "@smui/textfield": "^8.0.0-alpha.0",
-    "@svelte-material-ui/button": "^1.0.0-beta.10",
-    "@svelte-material-ui/card": "^1.0.0-beta.10",
-    "@svelte-material-ui/form-field": "^1.0.0-beta.10",
-    "@svelte-material-ui/textfield": "^1.0.0-beta.10",
-    "axios": "^1.7.2",
-    "carbon-components-svelte": "^0.85.0",
-    "svelte-material-ui": "^7.0.0"
+    "axios": "^1.7.2"
   }
 }
